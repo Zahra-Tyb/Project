@@ -26,7 +26,7 @@ import matplotlib.pyplot as plt
 
 # Constants
 ep0 = 1                         
-xc = 40
+ec = 40
 eta = 0.01
 u = 0.01
 delta = 0.2
@@ -51,9 +51,9 @@ for w in W:
     c += 1
 
     for i in range(10000):
-        term1 = np.sqrt((w + 1j * eta - si_initial)**2 - (delta + sz_initial)**2) - xc + ep0 - sx_initial
+        term1 = np.sqrt((w + 1j * eta - si_initial)**2 - (delta + sz_initial)**2) - ec + ep0 - sx_initial
         term2 = np.sqrt((w + 1j * eta - si_initial)**2 - (delta + sz_initial)**2) + ep0 - sx_initial
-        term3 = np.sqrt((w + 1j * eta - si_initial)**2 - (delta + sz_initial)**2) + xc - ep0 + sx_initial
+        term3 = np.sqrt((w + 1j * eta - si_initial)**2 - (delta + sz_initial)**2) + ec - ep0 + sx_initial
         term4 = np.sqrt((w + 1j * eta - si_initial)**2 - (delta + sz_initial)**2) - ep0 + sx_initial
 
         si = u * ((w + 1j * eta - si_initial) / (np.sqrt((w + 1j * eta - si_initial)**2 - (delta + sz_initial)**2))) * (
